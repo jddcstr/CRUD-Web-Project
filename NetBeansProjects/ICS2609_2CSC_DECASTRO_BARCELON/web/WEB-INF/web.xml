@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>myservlets.LoginServlet</servlet-class>
+
+        <init-param>
+            <param-name>URL</param-name>
+            <param-value>jdbc:derby://localhost:1527/LoginDB</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>dbUser</param-name>
+            <param-value>app</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>dbPass</param-name>
+            <param-value>app</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>dbDriver</param-name>
+            <param-value>org.apache.derby.jdbc.ClientDriver</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>cipherAlgorithm</param-name>
+            <param-value>AES/ECB/PKCS5Padding</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>secretKey</param-name>
+            <param-value>SecretKeyMP3proj</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>recaptchaSecretKey</param-name>
+            <param-value>6LdmmZgsAAAAAK2KH_pDcmLJWHT5-mc9hqdI-SBT</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>myservlets.LogoutServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CreateServlet</servlet-name>
+        <servlet-class>myservlets.CreateServlet</servlet-class>
+        
+        <init-param>
+            <param-name>URL</param-name>
+            <param-value>jdbc:derby://localhost:1527/LoginDB</param-value>
+        </init-param>
+        
+        <init-param>
+            <param-name>dbUser</param-name>
+            <param-value>app</param-value>
+        </init-param>
+        
+        <init-param>
+            <param-name>dbPass</param-name>
+            <param-value>app</param-value>
+        </init-param>
+        
+        <init-param>
+            <param-name>dbDriver</param-name>
+            <param-value>org.apache.derby.jdbc.ClientDriver</param-value>
+        </init-param>
+        
+        <init-param>
+            <param-name>cipherAlgorithm</param-name>
+            <param-value>AES/ECB/PKCS5Padding</param-value>
+        </init-param>
+        
+        <init-param>
+            <param-name>secretKey</param-name>
+            <param-value>SecretKeyMP3proj</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>CreateServlet</servlet-name>
+        <url-pattern>/CreateServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>UpdateServlet</servlet-name>
+        <servlet-class>myservlets.UpdateServlet</servlet-class>
+        
+        <init-param>
+            <param-name>URL</param-name>
+            <param-value>jdbc:derby://localhost:1527/LoginDB</param-value>
+        </init-param>
+        
+        <init-param>
+            <param-name>dbUser</param-name>
+            <param-value>app</param-value>
+        </init-param>
+        
+        <init-param>
+            <param-name>dbPass</param-name>
+            <param-value>app</param-value>
+        </init-param>
+        
+        <init-param>
+            <param-name>dbDriver</param-name>
+            <param-value>org.apache.derby.jdbc.ClientDriver</param-value>
+        </init-param>
+        
+        <init-param>
+            <param-name>cipherAlgorithm</param-name>
+            <param-value>AES/ECB/PKCS5Padding</param-value>
+        </init-param>
+        
+        <init-param>
+            <param-name>secretKey</param-name>
+            <param-value>SecretKeyMP3proj</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>UpdateServlet</servlet-name>
+        <url-pattern>/UpdateServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>myservlets.DeleteServlet</servlet-class>
+        
+        <init-param>
+            <param-name>URL</param-name>
+            <param-value>jdbc:derby://localhost:1527/LoginDB</param-value>
+        </init-param>
+        
+        <init-param>
+            <param-name>dbUser</param-name>
+            <param-value>app</param-value>
+        </init-param>
+        
+        <init-param>
+            <param-name>dbPass</param-name>
+            <param-value>app</param-value>
+        </init-param>
+        
+        <init-param>
+            <param-name>dbDriver</param-name>
+            <param-value>org.apache.derby.jdbc.ClientDriver</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/DeleteServlet</url-pattern>
+    </servlet-mapping>
+    
+    <listener>
+        <listener-class>contextlistener.ContextListener</listener-class>
+    </listener>
+    
+    <session-config>
+        <session-timeout>
+            5
+        </session-timeout>
+    </session-config>
+    
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error_4.jsp</location>
+    </error-page>
+    
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+</web-app>

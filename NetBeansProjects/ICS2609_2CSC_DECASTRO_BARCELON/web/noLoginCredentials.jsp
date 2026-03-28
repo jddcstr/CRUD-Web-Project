@@ -1,0 +1,34 @@
+<%-- 
+    Document   : noLoginCredentials
+    Created on : 02 26, 26, 10:20:43 PM
+    Author     : dwayne
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Null Value Page</title>
+        <link rel="stylesheet" href="css/success.css">
+    </head>
+    <body>
+        <header>
+            <h1>Machine Problem 2 CRUD System</h1>
+        </header>
+        <div class="dashboard-container">
+            <div class="error-card">
+                <h2 class="error-title">Login Failed</h2>
+                
+                <p class="error-message">
+                    You tried to log in with empty fields.<br>
+                    Please input your Username and Password to log in.
+                </p>
+                <a href="index.jsp" class="error-btn">Back to Login</a>
+            </div>
+        </div>
+            <footer>
+                <p>© De Castro - Barcelon CRUD System</p>
+            </footer>
+    </body>
+</html>
